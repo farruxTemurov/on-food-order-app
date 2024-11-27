@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" type="icon/x-image">
+    <title>WebFood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Oleo+Script&family=Open+Sans:wght@400;700&family=Quicksand:wght@500;600&family=Roboto:wght@400;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles.css">
+    <script src="/scripts/cart-management.js" defer></script>
+    <style>
+        .product-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .card-image {
+            height: 15rem;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 0.25rem;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .card-price {
+            color: #555;
+            font-size: 1em;
+            margin: 5px 0;
+        }
+
+        .card-description {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .add-to-cart {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .add-to-cart:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 48rem) {
+            .product-list {
+                grid-template-columns: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <header id="main-header">
+            <a href="/public/index.html" id="logo">WebFood</a>
+            <nav>
+                <ul>
+                    <li><a href="/public/index.html">Browse Meals</a></li>
+                    <li><a href="/public/orders.html">My Orders</a></li>
+                    <li><a href="/public/signUp.html">Sign up</a></li>
+                    <li><a href="/public/login.html">Login</a></li>
+                </ul>
+            </nav>
+            <a href="#side-drawer" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </header>
+        <aside id="side-drawer">
+            <header>
+                <a href="#" class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="/public/index.html">Browse Meals</a></li>
+                    <li><a href="/public/orders.html">My Orders</a></li>
+                    <li><a href="/public/signUp.html">Sign up</a></li>
+                    <li><a href="/public/login.html">Login</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </header>
+
+    <h1>My Orders</h1>
+    <div id="product-list" class="product-list"></div>
+
+</body>
+
+</html>
